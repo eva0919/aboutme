@@ -158,6 +158,7 @@ var Contact = React.createClass({
 	render:function(){
 		return(
 			<div className="contact-box">
+			If you want to review formally resume, please click this <a target='_blank' href="https://www.dropbox.com/s/po19ewm4zpia3g7/Resume.pdf?dl=0">link(Resume)</a> to download PDF file.
 				<hr />
 				<h2 className="title_text">Contact</h2>
 				<ul>

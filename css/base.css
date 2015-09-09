@@ -90,6 +90,12 @@ ul>li>.date{
 }
 .contact-box{
 	text-align: center;
+	margin-top: 50px;
+	font-size: 110%;
+	font-weight: lighter;
+}
+.contact-box>a{
+	color:#FF0000;
 }
 .contact-box >ul{
 	list-style: none;
@@ -103,4 +109,14 @@ ul>li>.date{
 }
 .contact-box >ul>li>a{
 	color:#0088A8;
+	opacity: 0.8;
+}
+.contact-box >ul>li>a:hover{
+	color: #007799;
+	opacity:1;
+}
+.skill-box>ul>li>a{
+	color:#0088A8;
+	font-size: 110%;
+	font-weight: lighter;
 }
