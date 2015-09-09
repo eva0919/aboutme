@@ -57,7 +57,7 @@ var IntroductionContent = React.createClass({displayName: "IntroductionContent",
 		return(
 			React.createElement("div", {className: "introduction-content-box"}, 
 				React.createElement("h2", {className: "title_text"}, "Introduction"), 
-				"Hi!I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life not only faster, but better."
+				"Hi!I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life better not only wealthier."
 			
 			)
 		);

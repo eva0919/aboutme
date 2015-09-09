@@ -57,7 +57,7 @@ var IntroductionContent = React.createClass({
 		return(
 			<div className="introduction-content-box">
 				<h2 className="title_text">Introduction</h2>
-				Hi!I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life better not only wealthier.
+				Hi!I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life not only faster, but better.
 			
 			</div>
 		);
@@ -189,13 +189,22 @@ var Content = React.createClass({
 		);
 	}
 });
-
+var CircleImage = React.createClass({
+	render:function(){
+		return(
+			<div className="circle_box">
+				<img className="circle_img"src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1385793_699317240086719_965516295_n.jpg?oh=681e978846867d3890b04dfa2aba43c4&oe=56703445&__gda__=1450247180_8c072e21e6114262dd761e86b9609259" />
+			</div>
+		);
+	}
+});
 
 var Main = React.createClass({
 
 	render: function(){
 		return(
 			<div className="main">
+			<CircleImage />
 			<Content achi_data={this.props.achi_data} job_data={this.props.job_data}/>
 			</div>
 		);

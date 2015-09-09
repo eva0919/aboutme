@@ -120,3 +120,18 @@ ul>li>.date{
 	font-size: 110%;
 	font-weight: lighter;
 }
+.circle_box{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	border-radius: 50px;
+	position: absolute;
+	left: 5%; 
+	opacity: 0.8;
+}
+.circle_box:hover{
+	opacity: 1;
+}
+.circle_img{
+	width: 100px
+}
