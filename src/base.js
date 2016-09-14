@@ -6,12 +6,24 @@ var achieveimentData = [
 {price:"Outstanding Prize",name:"iTree",text:"Longterm Entrepreneur Competition",date:"Feb. 2012",}
 ];
 var jobData =[
-	{job:"Web Developer",
-	link:"http://pieces.hypo.cc/",
-	company:"Hypo",date:"Jul. 2014 - Feb. 2015"},
-	{job:"Intern",
-	link:"http://tmi.vc/",
-	company:"TMI",date:"Sep. 2012 - Dece. 2012"}
+	{
+		job:"Software Engineer",
+		link:"https://fiiser.com/",
+		company:"Fiiser",
+		date:"Oct. 2015 - Present"
+	},
+	{
+		job:"Web Developer",
+		link:"http://pieces.hypo.cc/",
+		company:"Hypo",
+		date:"Jul. 2014 - Feb. 2015"
+	},
+	{
+		job:"Intern",
+		link:"http://tmi.vc/",
+		company:"TMI",
+		date:"Sep. 2012 - Dec. 2012"
+	}
 ];
 // section for react function declaring
 var NavBar = React.createClass({
@@ -57,7 +69,7 @@ var IntroductionContent = React.createClass({
 		return(
 			<div className="introduction-content-box">
 				<h2 className="title_text">Introduction</h2>
-				Hi!I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life not only faster, but better.
+				Hi! I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life not only faster, but better.
 			
 			</div>
 		);
@@ -193,7 +205,7 @@ var CircleImage = React.createClass({
 	render:function(){
 		return(
 			<div className="circle_box">
-				<img className="circle_img"src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1385793_699317240086719_965516295_n.jpg?oh=681e978846867d3890b04dfa2aba43c4&oe=56703445&__gda__=1450247180_8c072e21e6114262dd761e86b9609259" />
+				<img className="circle_img"src="https://graph.facebook.com/v2.7/1273896409295463/picture?height=300" />
 			</div>
 		);
 	}
