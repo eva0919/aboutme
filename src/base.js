@@ -10,7 +10,11 @@ var jobData =[
 		job:"Software Engineer",
 		link:"https://fiiser.com/",
 		company:"Fiiser",
-		date:"Oct. 2015 - Present"
+		date:"Oct. 2015 - Present",
+		descript: [
+					"Core member in building Live-stream product, including setting up system architecture, implement iOS app, and looking for alternate solution.",
+					"Developing Main Web Page, Mobile Web. Moreove, building testing system to make sure that functions work."
+					]
 	},
 	{
 		job:"Web Developer",
@@ -97,6 +101,23 @@ var Achievement = React.createClass({
 		);
 	}
 });
+var JobDescriptor = React.createClass({
+	render: function(){
+		if( this.props.descript ){
+			var listNodes = this.props.descript.map(function(data){
+				return(
+					<li>{data}</li>
+				);
+			});
+		}else{
+			var listNodes = "";
+		}
+		return(
+			<ul className="jobDescriptor"> {listNodes} </ul>
+			)
+	}
+});
+
 var Experience = React.createClass({
 	render:function(){
 		var listNodes = this.props.job_data.map(function(data){
@@ -105,7 +126,7 @@ var Experience = React.createClass({
 					<span className="job">{data.job},</span>
 					<span className="company"><a target='_blank' href={data.link}>{data.company}</a></span>
 					<div className="date">{data.date}</div>
-					
+					<JobDescriptor descript={data.descript} />
 				</li>
 			);
 		});
@@ -153,7 +174,10 @@ var Skill = React.createClass({
 					Core member of NTU design thinking club (first design thinking agency in Taiwan)
 					</li>
 					<li>
-					Have experiences in developing under MVC framework (Ruby on Rails).
+					Familiar with JS and jQuery(JS lib). Keep learning JS framework such as React.
+					</li>
+					<li>
+					Have experiences in developing under MVC framework (Django, Ruby on Rails).
 					</li>
 					<li>
 					Master of research is about text mining. Moderately high understanding of text mining, data mining, and information retrieval.
@@ -192,8 +216,8 @@ var Content = React.createClass({
 		return(
 			<div className="content">
 				<Introduction />
-				<Achievement achi_data={this.props.achi_data}/>
 				<Experience job_data={this.props.job_data}/>
+				<Achievement achi_data={this.props.achi_data}/>
 				<Education />
 				<Skill />
 				<Contact />

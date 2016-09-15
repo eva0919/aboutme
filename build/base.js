@@ -56,7 +56,11 @@
 			job:"Software Engineer",
 			link:"https://fiiser.com/",
 			company:"Fiiser",
-			date:"Oct. 2015 - Present"
+			date:"Oct. 2015 - Present",
+			descript: [
+						"Core member in building Live-stream product, including setting up system architecture, implement iOS app, and looking for alternate solution.",
+						"Developing Main Web Page, Mobile Web. Moreove, building testing system to make sure that functions work."
+						]
 		},
 		{
 			job:"Web Developer",
@@ -143,6 +147,23 @@
 			);
 		}
 	});
+	var JobDescriptor = React.createClass({displayName: "JobDescriptor",
+		render: function(){
+			if( this.props.descript ){
+				var listNodes = this.props.descript.map(function(data){
+					return(
+						React.createElement("li", null, data)
+					);
+				});
+			}else{
+				var listNodes = "";
+			}
+			return(
+				React.createElement("ul", {className: "jobDescriptor"}, " ", listNodes, " ")
+				)
+		}
+	});
+
 	var Experience = React.createClass({displayName: "Experience",
 		render:function(){
 			var listNodes = this.props.job_data.map(function(data){
@@ -150,8 +171,8 @@
 					React.createElement("li", null, 
 						React.createElement("span", {className: "job"}, data.job, ","), 
 						React.createElement("span", {className: "company"}, React.createElement("a", {target: "_blank", href: data.link}, data.company)), 
-						React.createElement("div", {className: "date"}, data.date)
-						
+						React.createElement("div", {className: "date"}, data.date), 
+						React.createElement(JobDescriptor, {descript: data.descript})
 					)
 				);
 			});
@@ -199,7 +220,10 @@
 						"Core member of NTU design thinking club (first design thinking agency in Taiwan)"
 						), 
 						React.createElement("li", null, 
-						"Have experiences in developing under MVC framework (Ruby on Rails)."
+						"Familiar with JS and jQuery(JS lib). Keep learning JS framework such as React."
+						), 
+						React.createElement("li", null, 
+						"Have experiences in developing under MVC framework (Django, Ruby on Rails)."
 						), 
 						React.createElement("li", null, 
 						"Master of research is about text mining. Moderately high understanding of text mining, data mining, and information retrieval."
@@ -238,8 +262,8 @@
 			return(
 				React.createElement("div", {className: "content"}, 
 					React.createElement(Introduction, null), 
-					React.createElement(Achievement, {achi_data: this.props.achi_data}), 
 					React.createElement(Experience, {job_data: this.props.job_data}), 
+					React.createElement(Achievement, {achi_data: this.props.achi_data}), 
 					React.createElement(Education, null), 
 					React.createElement(Skill, null), 
 					React.createElement(Contact, null)

@@ -67,6 +67,10 @@ body{
 	font-size: 105%;
 	margin: 5px;
 }
+.experience-box >ul>li>.jobDescriptor{
+	color:#222222;
+	opacity: 0.6;
+}
 ul>li>.date{
 	display: inline-block;
 	float: right;
