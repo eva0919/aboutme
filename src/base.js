@@ -11,10 +11,20 @@ var jobData =[
 		link:"https://fiiser.com/",
 		company:"Fiiser",
 		date:"Oct. 2015 - Present",
-		descript: [
-					"Core member in building Live-stream product, including setting up system architecture, implement iOS app, and looking for alternate solution.",
-					"Developing Main Web Page, Mobile Web. Moreove, building testing system to make sure that functions work."
-					]
+		production:[
+			{
+				name: "SoQ*Live",
+				descript: "Core member in building Live-stream product, including setting up system architecture, implement iOS app, and looking for alternate solution.",
+				linkUrl: "https://itunes.apple.com/us/app/soqlive/id1133870559?l=zh&ls=1&mt=8"
+			},
+			{
+				name: "Fiiser",
+				descript: "Developing Main Web Page, Mobile Web. Moreover, building testing system to make sure that functions work.",
+				linkUrl: "https://www.fiiser.com"
+			}
+		]
+
+		
 	},
 	{
 		job:"Web Developer",
@@ -73,7 +83,7 @@ var IntroductionContent = React.createClass({
 		return(
 			<div className="introduction-content-box">
 				<h2 className="title_text">Introduction</h2>
-				Hi! I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life not only faster, but better.
+				<p> Chen is passionate about computer science and enthused over developing products. Chen believes that technology will make this world not only faster, but better. Besides, Chen keeps contacting information of innovation and startup. Never give up to try any chance to change this world.</p>
 			
 			</div>
 		);
@@ -101,12 +111,13 @@ var Achievement = React.createClass({
 		);
 	}
 });
-var JobDescriptor = React.createClass({
+
+var JobProduction = React.createClass({
 	render: function(){
-		if( this.props.descript ){
-			var listNodes = this.props.descript.map(function(data){
+		if( this.props.production ){
+			var listNodes = this.props.production.map(function(data){
 				return(
-					<li>{data}</li>
+					<li>[ <a target='_blank' href={data.linkUrl}>{data.name}</a> ] {data.descript}</li>
 				);
 			});
 		}else{
@@ -126,7 +137,7 @@ var Experience = React.createClass({
 					<span className="job">{data.job},</span>
 					<span className="company"><a target='_blank' href={data.link}>{data.company}</a></span>
 					<div className="date">{data.date}</div>
-					<JobDescriptor descript={data.descript} />
+					<JobProduction production={data.production} />
 				</li>
 			);
 		});
@@ -177,7 +188,7 @@ var Skill = React.createClass({
 					Familiar with JS and jQuery(JS lib). Keep learning JS framework such as React.
 					</li>
 					<li>
-					Have experiences in developing under MVC framework (Django, Ruby on Rails).
+					Have experiences in developing with MVC framework (Django, Ruby on Rails).
 					</li>
 					<li>
 					Master of research is about text mining. Moderately high understanding of text mining, data mining, and information retrieval.

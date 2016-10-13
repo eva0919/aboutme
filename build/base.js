@@ -57,10 +57,20 @@
 			link:"https://fiiser.com/",
 			company:"Fiiser",
 			date:"Oct. 2015 - Present",
-			descript: [
-						"Core member in building Live-stream product, including setting up system architecture, implement iOS app, and looking for alternate solution.",
-						"Developing Main Web Page, Mobile Web. Moreove, building testing system to make sure that functions work."
-						]
+			production:[
+				{
+					name: "SoQ*Live",
+					descript: "Core member in building Live-stream product, including setting up system architecture, implement iOS app, and looking for alternate solution.",
+					linkUrl: "https://itunes.apple.com/us/app/soqlive/id1133870559?l=zh&ls=1&mt=8"
+				},
+				{
+					name: "Fiiser",
+					descript: "Developing Main Web Page, Mobile Web. Moreover, building testing system to make sure that functions work.",
+					linkUrl: "https://www.fiiser.com"
+				}
+			]
+
+			
 		},
 		{
 			job:"Web Developer",
@@ -119,7 +129,7 @@
 			return(
 				React.createElement("div", {className: "introduction-content-box"}, 
 					React.createElement("h2", {className: "title_text"}, "Introduction"), 
-					"Hi! I am Chen, graduated from National Taiwan University. Passionate about computer science and enthused over developing products. I believe that technology will make our life not only faster, but better."
+					React.createElement("p", null, " Chen is passionate about computer science and enthused over developing products. Chen believes that technology will make this world not only faster, but better. Besides, Chen keeps contacting information of innovation and startup. Never give up to try any chance to change this world.")
 				
 				)
 			);
@@ -147,12 +157,13 @@
 			);
 		}
 	});
-	var JobDescriptor = React.createClass({displayName: "JobDescriptor",
+
+	var JobProduction = React.createClass({displayName: "JobProduction",
 		render: function(){
-			if( this.props.descript ){
-				var listNodes = this.props.descript.map(function(data){
+			if( this.props.production ){
+				var listNodes = this.props.production.map(function(data){
 					return(
-						React.createElement("li", null, data)
+						React.createElement("li", null, "[ ", React.createElement("a", {target: "_blank", href: data.linkUrl}, data.name), " ] ", data.descript)
 					);
 				});
 			}else{
@@ -172,7 +183,7 @@
 						React.createElement("span", {className: "job"}, data.job, ","), 
 						React.createElement("span", {className: "company"}, React.createElement("a", {target: "_blank", href: data.link}, data.company)), 
 						React.createElement("div", {className: "date"}, data.date), 
-						React.createElement(JobDescriptor, {descript: data.descript})
+						React.createElement(JobProduction, {production: data.production})
 					)
 				);
 			});
@@ -223,7 +234,7 @@
 						"Familiar with JS and jQuery(JS lib). Keep learning JS framework such as React."
 						), 
 						React.createElement("li", null, 
-						"Have experiences in developing under MVC framework (Django, Ruby on Rails)."
+						"Have experiences in developing with MVC framework (Django, Ruby on Rails)."
 						), 
 						React.createElement("li", null, 
 						"Master of research is about text mining. Moderately high understanding of text mining, data mining, and information retrieval."
