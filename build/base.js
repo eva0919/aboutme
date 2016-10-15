@@ -251,7 +251,7 @@
 		render:function(){
 			return(
 				React.createElement("div", {className: "contact-box"}, 
-				"If you want to review formally resume, please click this ", React.createElement("a", {target: "_blank", href: "https://www.dropbox.com/s/po19ewm4zpia3g7/Resume.pdf?dl=0"}, "link(Resume)"), " to download PDF file.", 
+				"If you want to review formally resume, please click this ", React.createElement("a", {target: "_blank", href: "https://www.dropbox.com/s/3ni2dysyb5zlse9/Resume_en_advance.pdf?dl=0"}, "link(Resume)"), " to download PDF file.", 
 					React.createElement("hr", null), 
 					React.createElement("h2", {className: "title_text"}, "Contact"), 
 					React.createElement("ul", null, 
