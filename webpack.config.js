@@ -1,10 +1,12 @@
 module.exports = {
   entry: "./src/base.js",
   output: {
-    filename: "./build/base.js"
+    path: `${__dirname}/build`,
+    filename: "base.js"
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -13,7 +15,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{
+        use: [
+          {
             loader: "style-loader"
           },
           {
